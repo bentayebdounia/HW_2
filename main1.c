@@ -21,8 +21,11 @@ int   **A	, **B 	, 	**C 	, **D  ,  n  , p  , i , j , k   ;
 char choix [1];
 
  int main (int argc,char *argv[]) {
+	 
+	printf ( " entrer la taille de matrice  " );
+        scanf( "%d" , n );
 
-     A = (int **)malloc(n * sizeof(int *));
+        A = (int **)malloc(n * sizeof(int *));
 
 	for (i = 0; i < n; i++)
 		A[i] = (int *)malloc(n * sizeof(int));
@@ -51,8 +54,7 @@ char choix [1];
 
 	generateRandomMatrix(B, n, 0, 99);			//méthode pour remplir B aléatoirement
 	//printMatrix(B);
-    printf ( " entrer la taille de matrice  " );
-    scanf( "%d" , n );
+    
 
     printf ( " choisi la méthode de calcule s or p " );
     scanf( "%s" , choix );
